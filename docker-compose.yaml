@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  switchbot-exporter:
+    image: ghcr.io/yude/switchbot-exporter:master
+    build: .
+    container_name: switchbot-exporter
+    hostname: switchbot-exporter
+    restart: unless-stopped
+    env_file: .env
